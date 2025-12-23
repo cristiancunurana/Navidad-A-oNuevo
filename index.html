@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestro Árbol de Recuerdos 2025</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body id="app-body" class="theme-christmas">
+    <!-- Fondo animado con estrellas/nieve -->
+    <div class="animated-background">
+        <div class="snowflakes" aria-hidden="true">
+            <div class="snowflake">❅</div>
+            <div class="snowflake">❆</div>
+            <div class="snowflake">❅</div>
+            <div class="snowflake">❆</div>
+            <div class="snowflake">❅</div>
+            <div class="snowflake">❆</div>
+            <div class="snowflake">❅</div>
+            <div class="snowflake">❆</div>
+            <div class="snowflake">❅</div>
+            <div class="snowflake">❆</div>
+            <div class="snowflake">❅</div>
+            <div class="snowflake">❆</div>
+        </div>
+    </div>
+
+    <!-- Pantalla de bienvenida -->
+    <div id="welcome-screen" class="welcome-screen">
+        <div class="welcome-content">
+            <h1 class="glowing-title">Un Año de Recuerdos</h1>
+            <p class="subtitle-text">Cada mes vivido, cada momento guardado.<br>Este árbol es nuestra historia de 2024.
+            </p>
+            <button id="start-btn" class="start-button">
+                <span>Ver el árbol</span>
+                <span class="button-icon">✨</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Contenido principal -->
+    <div id="main-content" class="main-content hidden">
+        <!-- Contadores -->
+        <div class="counters-container">
+            <div class="counter-box glass-effect">
+                <!-- Christmas Section -->
+                <div class="countdown-section" id="section-christmas">
+                    <h3 class="countdown-title">Tiempo hasta Navidad</h3>
+
+                    <div id="countdown-christmas" class="countdown">
+                        <div class="time-unit">
+                            <span class="time-value" id="days">00</span>
+                            <span class="time-label">Días</span>
+                        </div>
+                        <div class="time-unit">
+                            <span class="time-value" id="hours">00</span>
+                            <span class="time-label">Horas</span>
+                        </div>
+                        <div class="time-unit">
+                            <span class="time-value" id="minutes">00</span>
+                            <span class="time-label">Minutos</span>
+                        </div>
+                        <div class="time-unit">
+                            <span class="time-value" id="seconds">00</span>
+                            <span class="time-label">Segundos</span>
+                        </div>
+                    </div>
+
+                    <div id="christmas-message" class="christmas-message hidden">
+                        🎄 ¡Feliz Navidad! 🎄
+                    </div>
+                </div>
+
+                <div class="divider-line"></div>
+
+                <!-- New Year Section -->
+                <div class="countdown-section" id="section-newyear">
+                    <h3 class="countdown-title">Tiempo hasta Año Nuevo</h3>
+
+                    <div id="countdown-newyear" class="countdown">
+                        <div class="time-unit">
+                            <span class="time-value" id="ny-days">00</span>
+                            <span class="time-label">Días</span>
+                        </div>
+                        <div class="time-unit">
+                            <span class="time-value" id="ny-hours">00</span>
+                            <span class="time-label">Horas</span>
+                        </div>
+                        <div class="time-unit">
+                            <span class="time-value" id="ny-minutes">00</span>
+                            <span class="time-label">Minutos</span>
+                        </div>
+                        <div class="time-unit">
+                            <span class="time-value" id="ny-seconds">00</span>
+                            <span class="time-label">Segundos</span>
+                        </div>
+                    </div>
+
+                    <div id="newyear-message" class="christmas-message hidden">
+                        🎆 ¡Feliz Año Nuevo 2025! 🎆
+                    </div>
+                </div>
+            </div>
+
+            <div class="counter-box glass-effect">
+                <h3>Días vividos en 2024</h3>
+                <div class="year-counter">
+                    <span id="days-passed" class="year-value">0</span>
+                    <span class="year-label">de 366 días</span>
+                </div>
+                <div class="progress-ring">
+                    <svg width="120" height="120">
+                        <circle cx="60" cy="60" r="54" class="progress-ring-circle"></circle>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- Árbol de Navidad -->
+        <div class="tree-container">
+            <div class="tree">
+                <!-- Parte superior del árbol -->
+                <div class="tree-layer layer-1"></div>
+                <div class="tree-layer layer-2"></div>
+                <div class="tree-layer layer-3"></div>
+                <div class="tree-layer layer-4"></div>
+
+                <!-- Tronco -->
+                <div class="tree-trunk"></div>
+
+                <!-- Estrella en la punta -->
+                <div class="tree-star">⭐</div>
+
+                <!-- Bolitas con fotos (12 meses) -->
+                <div class="ornament" data-month="1" style="top: 15%; left: 48%;">
+                    <img src="assets/img/recuerdo1.jpg" alt="Enero">
+                    <span class="month-label">Enero</span>
+                </div>
+                <div class="ornament" data-month="2" style="top: 20%; left: 30%;">
+                    <img src="assets/img/recuerdo2.jpg" alt="Febrero">
+                    <span class="month-label">Febrero</span>
+                </div>
+                <div class="ornament" data-month="3" style="top: 22%; left: 66%;">
+                    <img src="assets/img/recuerdo3.jpg" alt="Marzo">
+                    <span class="month-label">Marzo</span>
+                </div>
+                <div class="ornament" data-month="4" style="top: 35%; left: 25%;">
+                    <img src="assets/img/recuerdo4.jpg" alt="Abril">
+                    <span class="month-label">Abril</span>
+                </div>
+                <div class="ornament" data-month="5" style="top: 38%; left: 50%;">
+                    <img src="assets/img/recuerdo7.jpg" alt="Mayo">
+                    <span class="month-label">Mayo</span>
+                </div>
+                <div class="ornament" data-month="6" style="top: 36%; left: 72%;">
+                    <img src="assets/img/recuerdo6.jpg" alt="Junio">
+                    <span class="month-label">Junio</span>
+                </div>
+                <div class="ornament" data-month="7" style="top: 52%; left: 20%;">
+                    <img src="assets/img/recuerdo5.jpg" alt="Julio">
+                    <span class="month-label">Julio</span>
+                </div>
+                <div class="ornament" data-month="8" style="top: 54%; left: 48%;">
+                    <img src="assets/img/recuerdo8.jpg" alt="Agosto">
+                    <span class="month-label">Agosto</span>
+                </div>
+                <div class="ornament" data-month="9" style="top: 53%; left: 76%;">
+                    <img src="assets/img/recuerdo9.jpg" alt="Septiembre">
+                    <span class="month-label">Septiembre</span>
+                </div>
+                <div class="ornament" data-month="10" style="top: 68%; left: 30%;">
+                    <img src="assets/img/recuerdo10.jpg" alt="Octubre">
+                    <span class="month-label">Octubre</span>
+                </div>
+                <div class="ornament" data-month="11" style="top: 70%; left: 50%;">
+                    <img src="assets/img/recuerdo11.jpg" alt="Noviembre">
+                    <span class="month-label">Noviembre</span>
+                </div>
+                <div class="ornament" data-month="12" style="top: 69%; left: 68%;">
+                    <img src="assets/img/recuerdo12.jpg" alt="Diciembre">
+                    <span class="month-label">Diciembre</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para ver fotos en grande -->
+    <div id="photo-modal" class="modal hidden">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="close-modal">✕</button>
+            <img id="modal-img" src="" alt="Recuerdo del mes">
+            <p id="modal-month" class="modal-month"></p>
+        </div>
+    </div>
+
+    <!-- Audios de fondo (2 audios: Navidad y Año Nuevo) -->
+    <audio id="christmas-audio" loop>
+        <source src="assets/audio/navidad.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="newyear-audio" loop>
+        <source src="assets/audio/año-nuevo.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
